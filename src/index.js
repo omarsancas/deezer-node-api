@@ -14,6 +14,12 @@ Deezer.prototype.getAlbum = function(id) {
     return rp({url: this.apiUrl + url, json:true});
 };
 
+
+Deezer.prototype.getAlbumByUpc = function(id) {
+    var url = '/album/upc:' + id;
+    return rp({url: this.apiUrl + url, json:true});
+};
+
 Deezer.prototype.getArtist = function(id) {
     var url = 'artist/' + id;
     return rp({url: this.apiUrl + url, json:true});
